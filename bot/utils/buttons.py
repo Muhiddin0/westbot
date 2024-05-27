@@ -2,12 +2,17 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, \
                             ReplyKeyboardMarkup, KeyboardButton,\
                             ReplyKeyboardRemove
 
+<<<<<<< HEAD
                             
 LANGUAGES_UZ = "🇺🇿 O'zbekcha"
 LANGUAGES_RU = "🇷🇺 Русский"
 LANGUAGES_EN = "🏴󠁧󠁢󠁥󠁮󠁧󠁿 English"
 
 
+
+REMOVE_BUTTON = ReplyKeyboardRemove()
+
+LANGUAGES_UZ = "O'zbekcha"
 LANGUAGES = ReplyKeyboardMarkup(
     keyboard=[
         [LANGUAGES_UZ],

@@ -7,6 +7,7 @@ from asyncio import create_task
 from loader import dp
 
 
+from services.services import create_user
 from states import Register
 
 
@@ -38,6 +39,15 @@ async def _task(message: types.Message, state: FSMContext):
     await state.update_data({
         'fullname': fullname
     })
+
+    # userni ma'lumotlarini olish
+    user = await state.get_data()
+
+    # userni ba'lumotlar bazasiga qo'shish
+    create_user(user)
+
+    # userni ro'yxatdan o'tgani haqida habar berish
+    await message.answer(text=texts.REGISTER_SUCCESS[user['lang']])
 
     # stateni ro'yxatdan o'tishni boshlash
     await state.finish()

@@ -9,7 +9,7 @@ from loader import dp
 from states import Register
 
 
-from utils import texts
+from utils import texts, buttons
 
 async def _task(message: types.Message, state: FSMContext):
     """
@@ -25,7 +25,7 @@ async def _task(message: types.Message, state: FSMContext):
     lang = state_data['lang']
     
     # userdan fullnameini so'rash
-    await message.answer(text=texts.FULLNAME[lang])
+    await message.answer(text=texts.FULLNAME[lang], reply_markup=buttons.REMOVE_BUTTON)
     
     # stateni yangilash, phoneni qo'shish
     await state.update_data({'phone': contact})
