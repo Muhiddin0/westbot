@@ -10,7 +10,7 @@ class UpdateRegister(StatesGroup):
     phone = State()
 
 class Comments(StatesGroup):
-    name = State()
+    commen_ball = State()
     comment = State()
     register_commit = State()
 
