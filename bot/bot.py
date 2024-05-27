@@ -1,4 +1,5 @@
 
+import os
 from aiogram import executor
 from loader import dp, bot
 
@@ -6,7 +7,7 @@ import user
 
 async def on_startup(dp):
     # Adminlarga xabar yuborish
-    ADMIN = 5765144405
+    ADMIN = os.getenv('ADMIN')
     await bot.send_message(ADMIN, "Bot ishga tushdi!")
 
 # disable skip_update deploy version
