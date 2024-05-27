@@ -89,7 +89,6 @@ For example: 'Muhiddin Kabraliv'
 """
 
 FULLNAME_ERROR = {
-<<<<<<< HEAD
     'uz': FULLNAME_ERROR_UZ,
     'ru': FULLNAME_ERROR_RU,
     'en': FULLNAME_ERROR_EN,
@@ -168,9 +167,6 @@ COMMENT_RECEPTION_EN = \
 """
 thank you for your feedback
 """
-=======
-    'uz':FULLNAME_ERROR_UZ
-}
 
 
 REGISTER_SUCCESS_UZ = """
@@ -181,4 +177,3 @@ Ro'yxatdan o'tdingiz
 REGISTER_SUCCESS = {
     'uz':REGISTER_SUCCESS_UZ
 }
->>>>>>> 65debd230c31c58c7ec563a7cef6b3cb827442fa
