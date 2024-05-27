@@ -1,5 +1,28 @@
 
 
+MENU_UZ = """
+<b>
+Asosiy menyuga xush kelibsiz
+</b>
+"""
+
+MENU_RU = """
+<b>
+Asosiy menyuga xush kelibsiz
+</b>
+"""
+
+MENU_EN = """
+<b>
+Welcome to the main menu
+</b>
+"""
+
+MENU = {
+    'uz': MENU_UZ,
+    'ru': MENU_RU,
+    'en': MENU_EN,
+}
 
 LANGUAGES = """
 <b>

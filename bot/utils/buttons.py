@@ -2,7 +2,6 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, \
                             ReplyKeyboardMarkup, KeyboardButton,\
                             ReplyKeyboardRemove
 
-
 LANGUAGES_UZ = "🇺🇿 O'zbekcha"
 LANGUAGES_RU = "🇷🇺 Русский"
 LANGUAGES_EN = "🏴󠁧󠁢󠁥󠁮󠁧󠁿 English"
@@ -10,6 +9,27 @@ LANGUAGES_EN = "🏴󠁧󠁢󠁥󠁮󠁧󠁿 English"
 
 
 REMOVE_BUTTON = ReplyKeyboardRemove()
+BACK = "⬅️ Ortga"
+
+
+MENU_ORDER_UZ = '🛍 Buyurtma berish'
+MENU_FEEDBACK_UZ = '✍️ Fikr bildirish'
+MENU_CONTACT_UZ = '☎️ Biz bilan aloqa'
+MENU_INFO_UZ = "ℹ️ Ma'lumot"
+MENU_SETTINGS_UZ = "⚙️ Sozlamalar"
+
+MENU_BUTTONS_UZ = ReplyKeyboardMarkup(
+    keyboard=[
+        [MENU_ORDER_UZ],
+        [MENU_FEEDBACK_UZ, MENU_CONTACT_UZ],
+        [MENU_INFO_UZ, MENU_SETTINGS_UZ]
+    ],
+    resize_keyboard=True
+)
+
+MENU = {
+    'uz':MENU_BUTTONS_UZ
+}
 
 LANGUAGES = ReplyKeyboardMarkup(
     keyboard=[

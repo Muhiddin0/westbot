@@ -4,8 +4,8 @@ from aiogram.dispatcher import FSMContext
 
 from asyncio import create_task
 
+from user.menu import MainMenu
 from loader import dp
-
 
 from services.services import create_user
 from states import Register
@@ -49,6 +49,8 @@ async def _task(message: types.Message, state: FSMContext):
     # userni ro'yxatdan o'tgani haqida habar berish
     await message.answer(text=texts.REGISTER_SUCCESS[user['lang']])
 
+    await MainMenu(message=message, state=state)
+    
     # stateni ro'yxatdan o'tishni boshlash
     await state.finish()
     
