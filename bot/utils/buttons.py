@@ -2,7 +2,9 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, \
                             ReplyKeyboardMarkup, KeyboardButton,\
                             ReplyKeyboardRemove
 
-                            
+
+REMOVE_BUTTON = ReplyKeyboardRemove()
+
 LANGUAGES_UZ = "O'zbekcha"
 LANGUAGES = ReplyKeyboardMarkup(
     keyboard=[

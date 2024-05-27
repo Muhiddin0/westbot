@@ -36,3 +36,13 @@ Misol uchun: 'Muhiddin Kabraliv'
 FULLNAME_ERROR = {
     'uz':FULLNAME_ERROR_UZ
 }
+
+
+REGISTER_SUCCESS_UZ = """
+<b>
+Ro'yxatdan o'tdingiz
+</b>
+"""
+REGISTER_SUCCESS = {
+    'uz':REGISTER_SUCCESS_UZ
+}
