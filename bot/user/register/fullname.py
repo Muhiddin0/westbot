@@ -7,7 +7,7 @@ from asyncio import create_task
 from user.menu import MainMenu
 from loader import dp
 
-from services.services import create_user
+from services.services import createUser
 from states import Register
 
 
@@ -37,14 +37,15 @@ async def _task(message: types.Message, state: FSMContext):
 
     # userdan fullnameini statega joylash
     await state.update_data({
-        'fullname': fullname
+        'fullname': fullname,
+        'user_id': message.from_user.id
     })
 
     # userni ma'lumotlarini olish
     user = await state.get_data()
 
     # userni ba'lumotlar bazasiga qo'shish
-    create_user(user)
+    createUser(user)
 
     # userni ro'yxatdan o'tgani haqida habar berish
     await message.answer(text=texts.REGISTER_SUCCESS[user['lang']])

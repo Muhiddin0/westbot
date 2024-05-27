@@ -226,3 +226,51 @@ SETTINGS_TEXT = {
     'ru': SETTINGS_TEXT_RU,
     'en': SETTINGS_TEXT_EN,
 }
+
+
+
+ORDER_UZ = """
+<b>
+Categoryani tanlang
+</b>
+"""
+
+ORDER_RU = """
+<b>
+Заказать
+</b>
+"""
+
+ORDER_EN = """
+<b>
+Order
+</b>
+"""
+ORDER = {
+    'uz': ORDER_UZ,
+}
+
+
+FOODS_UZ = """
+<b>
+Maxsulotni tanlang
+</b>
+"""
+
+FOODS_RU = """
+<b>
+Выберите продукт
+</b>
+"""
+
+FOODS_EN = """
+<b>
+Choose a product
+</b>
+"""
+
+FOODS = {
+    'uz': FOODS_UZ,
+    'ru': FOODS_RU,
+    'en': FOODS_EN
+}
