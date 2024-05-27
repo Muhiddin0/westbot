@@ -228,6 +228,7 @@ SETTINGS_TEXT = {
 }
 
 
+<<<<<<< HEAD
 CONTACT_UZ = \
 """
 Biz bilan bog'lanish uchun\n
@@ -343,3 +344,51 @@ Click the view information button below to see more specific information and add
 
 📞 To contact us +998938870000
 """
+=======
+
+ORDER_UZ = """
+<b>
+Categoryani tanlang
+</b>
+"""
+
+ORDER_RU = """
+<b>
+Заказать
+</b>
+"""
+
+ORDER_EN = """
+<b>
+Order
+</b>
+"""
+ORDER = {
+    'uz': ORDER_UZ,
+}
+
+
+FOODS_UZ = """
+<b>
+Maxsulotni tanlang
+</b>
+"""
+
+FOODS_RU = """
+<b>
+Выберите продукт
+</b>
+"""
+
+FOODS_EN = """
+<b>
+Choose a product
+</b>
+"""
+
+FOODS = {
+    'uz': FOODS_UZ,
+    'ru': FOODS_RU,
+    'en': FOODS_EN
+}
+>>>>>>> 54934e03dd3c134ed255b151fe5b6693c1657a9a

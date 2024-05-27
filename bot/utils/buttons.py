@@ -316,3 +316,62 @@ INFORMATION_EN = ReplyKeyboardMarkup(
 )
 
 
+BASKET_UZ = "🛒 Savat"
+DELIVER_UZ = "🚚 Yetkazib berish"
+
+
+def ORDER_BUTTONS(category, lang):
+    # Initialize the ReplyKeyboardMarkup with initial buttons
+    button = ReplyKeyboardMarkup(
+        row_width=2,
+        keyboard=[
+            [BASKET_UZ, DELIVER_UZ],
+        ],
+        resize_keyboard=True
+    )
+    
+    category_buttons = []
+
+    for i in category:
+        # Initialize a new row if the last row is filled or if it's the first button
+        if len(category_buttons) == 0 or len(category_buttons[-1]) == 2:
+            category_buttons.append([])
+
+        category_name = 'name_' + lang
+        # Append the category name button to the last row
+        category_buttons[-1].append(KeyboardButton(i[category_name]))
+    
+    # Adding the category buttons to the main keyboard
+    for row in category_buttons:
+        button.keyboard.append(row)
+
+    button.add(BACK)
+    return button
+
+
+def FOODS_BUTTONS(foods, lang):
+    # Initialize the ReplyKeyboardMarkup with initial buttons
+    button = ReplyKeyboardMarkup(
+        row_width=2,
+        keyboard=[
+            [BASKET_UZ, DELIVER_UZ],
+        ],
+        resize_keyboard=True
+    )
+    
+    food_buttons = []
+
+    for i in foods:
+        # Initialize a new row if the last row is filled or if it's the first button
+        if len(food_buttons) == 0 or len(food_buttons[-1]) == 2:
+            food_buttons.append([])
+
+        # Append the category name button to the last row
+        food_buttons[-1].append(KeyboardButton(i['name_uz']))
+    
+    # Adding the category buttons to the main keyboard
+    for row in food_buttons:
+        button.keyboard.append(row)
+
+    button.add(BACK)
+    return button
