@@ -80,7 +80,6 @@ For example: 'Muhiddin Kabraliv'
 """
 
 FULLNAME_ERROR = {
-<<<<<<< HEAD
     'uz': FULLNAME_ERROR_UZ,
     'ru': FULLNAME_ERROR_RU,
     'en': FULLNAME_ERROR_EN,
@@ -159,17 +158,48 @@ COMMENT_RECEPTION_EN = \
 """
 thank you for your feedback
 """
-=======
-    'uz':FULLNAME_ERROR_UZ
-}
-
 
 REGISTER_SUCCESS_UZ = """
 <b>
 Ro'yxatdan o'tdingiz
 </b>
 """
+
+REGISTER_SUCCESS_RU = """
+<b>
+Вы зарегистрировались
+</b>
+"""
+
+REGISTER_SUCCESS_EN = """
+<b>
+Registered
+</b>
+"""
+
+
 REGISTER_SUCCESS = {
-    'uz':REGISTER_SUCCESS_UZ
+    'uz': REGISTER_SUCCESS_UZ,
+    'ru': REGISTER_SUCCESS_RU,
+    'en': REGISTER_SUCCESS_EN,
 }
->>>>>>> 65debd230c31c58c7ec563a7cef6b3cb827442fa
+
+
+
+SETTINGS_TEXT_UZ = """
+<b>Ma'lumotlarni o'zgartirish uchun quyidagi tugmalardan foydalanishingiz mumkin 👇</b>
+"""
+
+SETTINGS_TEXT_RU = """
+<b>You can use the following buttons to change the data 👇</b>
+"""
+
+SETTINGS_TEXT_EN = """
+<b>Вы можете использовать следующие кнопки для изменения данных 👇</b>
+"""
+
+SETTINGS_TEXT = {
+    'uz': SETTINGS_TEXT_UZ,
+    'ru': SETTINGS_TEXT_RU,
+    'en': SETTINGS_TEXT_EN,
+}

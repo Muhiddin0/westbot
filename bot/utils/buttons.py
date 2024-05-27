@@ -2,8 +2,7 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, \
                             ReplyKeyboardMarkup, KeyboardButton,\
                             ReplyKeyboardRemove
 
-<<<<<<< HEAD
-                            
+
 LANGUAGES_UZ = "🇺🇿 O'zbekcha"
 LANGUAGES_RU = "🇷🇺 Русский"
 LANGUAGES_EN = "🏴󠁧󠁢󠁥󠁮󠁧󠁿 English"
@@ -12,7 +11,6 @@ LANGUAGES_EN = "🏴󠁧󠁢󠁥󠁮󠁧󠁿 English"
 
 REMOVE_BUTTON = ReplyKeyboardRemove()
 
-LANGUAGES_UZ = "O'zbekcha"
 LANGUAGES = ReplyKeyboardMarkup(
     keyboard=[
         [LANGUAGES_UZ],
@@ -55,28 +53,6 @@ PHONE = {
 
 }
 
-
-BUYURTMA_BUTTON_UZ = '📦 Buyurtma berish'
-FIKR_BUTTON_UZ = '✍️ Fikr bildirish'
-BUYURTMALARIM_BUTTON_UZ = '📝 Mening Buyurmalarim'
-SOZLAMALAR_BUTTON_UZ = '⚙️ Sozlamalar'
-SHARTLAR_BUTTON_UZ = "ℹ️ Ma'lumot"
-
-# MAIN MENU CR BUTTONS
-BUYURTMA_BUTTON_EN = '📦 Order'  # Заказать
-FIKR_BUTTON_EN = '✍️ Feedback'  # Предложить идею
-BUYURTMALARIM_BUTTON_EN = '📝 My Orders'  # Мои заказы
-SOZLAMALAR_BUTTON_EN = '⚙️ Settings'  # Настройки
-SHARTLAR_BUTTON_EN = "ℹ️ Reference"  # Условия использования
-
-
-
-# MAIN MENU RU BUTTONS
-BUYURTMA_BUTTON_RU = '📦 Заказать'
-FIKR_BUTTON_RU = '✍️ Предложить идею'
-BUYURTMALARIM_BUTTON_RU = '📝 Мои Заказы'
-SOZLAMALAR_BUTTON_RU = '⚙️ Настройки'
-SHARTLAR_BUTTON_RU = "ℹ️ информация"
 
 COMMENT_STATUS_ONE_UZ = 'Hammasi yoqdi ♥️'
 COMMENT_STATUS_TWO_UZ = 'Yaxshi ⭐️⭐️⭐️⭐️'
@@ -174,4 +150,70 @@ COMMENT_STATUS_EN = ReplyKeyboardMarkup(
 )
 
 
+
+TIL_SOZLAMALARI_BUTTON_UZ = "🔄 Tilni o'zgartirish"
+TIL_SOZLAMALARI_BUTTON_EN = "🔄 Change language"
+TIL_SOZLAMALARI_BUTTON_RU = "🔄 Смена языка"
+
+PHONE_SWITCH_UZ = "📞 Telefon raqamni o'zgartirish"
+PHONE_SWITCH_EN = "📞 Change phone number"
+PHONE_SWITCH_RU = "📞 Смена номера телефона"
+
+FULLNAME_SWITCH_UZ = "Ismni o'zgartirish"
+FULLNAME_SWITCH_RU = "Изменение имени"
+FULLNAME_SWITCH_EN = "Name change"
+
+
+ORTGA_BUTTON_UZ = "🔙 Ortga"
+ORTGA_BUTTON_EN = "🔙 back"
+ORTGA_BUTTON_RU = "🔙 Назад"
+
+
+SETTINGS_MENYU_UZ = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            FULLNAME_SWITCH_UZ,
+            TIL_SOZLAMALARI_BUTTON_UZ
+        ],
+        [
+            PHONE_SWITCH_UZ
+        ],
+        [
+            ORTGA_BUTTON_UZ
+        ],
+    ],
+    resize_keyboard=True
+)
+
+SETTINGS_MENYU_RU = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            FULLNAME_SWITCH_RU,
+            TIL_SOZLAMALARI_BUTTON_RU
+        ],
+        [
+            PHONE_SWITCH_RU
+        ],
+        [
+            ORTGA_BUTTON_RU
+        ],
+    ],
+    resize_keyboard=True
+)
+
+SETTINGS_MENYU_EN = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            FULLNAME_SWITCH_EN,
+            TIL_SOZLAMALARI_BUTTON_EN
+        ],
+        [
+            PHONE_SWITCH_EN
+        ],
+        [
+            ORTGA_BUTTON_EN
+        ],
+    ],
+    resize_keyboard=True
+)
 
