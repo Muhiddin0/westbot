@@ -177,3 +177,13 @@ Ro'yxatdan o'tdingiz
 REGISTER_SUCCESS = {
     'uz':REGISTER_SUCCESS_UZ
 }
+
+ORDER_UZ = """
+<b>
+Buyurtma berish
+</b>
+"""
+
+ORDER = {
+    'uz': ORDER_UZ
+}
