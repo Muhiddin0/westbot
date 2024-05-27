@@ -2,6 +2,8 @@
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 
+from user.menu import MainMenu
+from services.services import getUser
 from loader import dp
 
 from asyncio import create_task
@@ -23,8 +25,7 @@ async def send_welcome_task(message: types.Message, state: FSMContext):
     user_id = message.from_user.id
 
     # user
-    user = False  
-
+    user = getUser(user_id)
 
     if not user:
         """
@@ -34,6 +35,7 @@ async def send_welcome_task(message: types.Message, state: FSMContext):
         await message.answer(text=texts.LANGUAGES, reply_markup=buttons.LANGUAGES)
         await Register.lang.set()
 
+    await MainMenu(message=message, state=state)
 
 @dp.message_handler(state='*', commands=['start', 'help'])
 async def send_welcome(message: types.Message, state: FSMContext):

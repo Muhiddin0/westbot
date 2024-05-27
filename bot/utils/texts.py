@@ -1,5 +1,14 @@
 
 
+MENU_UZ = """
+<b>
+Asosiy menyuga xush kelibsiz
+</b>
+"""
+
+MENU = {
+    'uz':MENU_UZ
+}
 
 LANGUAGES = """
 <b>
@@ -45,4 +54,14 @@ Ro'yxatdan o'tdingiz
 """
 REGISTER_SUCCESS = {
     'uz':REGISTER_SUCCESS_UZ
+}
+
+ORDER_UZ = """
+<b>
+Categoriyani tanlang
+</b>
+"""
+
+ORDER = {
+    'uz':ORDER_UZ
 }
