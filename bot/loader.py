@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 storage = MemoryStorage()
 
 
-TEST_BOT = "7051414083:AAHpBU6u5acYtJTcwyyclm3-DJJzUIJme-c"
+TEST_BOT = "6194703225:AAG60MbPv8xYrSDVG4JLmJbsVpOwI6cBMs4"
 API_TOKEN = os.getenv('BOT_TOKEN') or TEST_BOT
 
 # Initialize bot and dispatcher

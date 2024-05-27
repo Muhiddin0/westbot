@@ -24,6 +24,8 @@ async def _task(message: types.Message, state: FSMContext):
     
     lang_codes = {
         buttons.LANGUAGES_UZ: 'uz',
+        buttons.LANGUAGES_RU: 'ru',
+        buttons.LANGUAGES_EN: 'en'
     }
 
     if not lang in lang_codes: 
