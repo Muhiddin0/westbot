@@ -6,8 +6,22 @@ Asosiy menyuga xush kelibsiz
 </b>
 """
 
+MENU_RU = """
+<b>
+Asosiy menyuga xush kelibsiz
+</b>
+"""
+
+MENU_EN = """
+<b>
+Welcome to the main menu
+</b>
+"""
+
 MENU = {
-    'uz':MENU_UZ
+    'uz': MENU_UZ,
+    'ru': MENU_RU,
+    'en': MENU_EN,
 }
 
 LANGUAGES = """
@@ -168,22 +182,47 @@ COMMENT_RECEPTION_EN = \
 thank you for your feedback
 """
 
-
 REGISTER_SUCCESS_UZ = """
 <b>
 Ro'yxatdan o'tdingiz
 </b>
 """
-REGISTER_SUCCESS = {
-    'uz':REGISTER_SUCCESS_UZ
-}
 
-ORDER_UZ = """
+REGISTER_SUCCESS_RU = """
 <b>
-Buyurtma berish
+Вы зарегистрировались
 </b>
 """
 
-ORDER = {
-    'uz': ORDER_UZ
+REGISTER_SUCCESS_EN = """
+<b>
+Registered
+</b>
+"""
+
+
+REGISTER_SUCCESS = {
+    'uz': REGISTER_SUCCESS_UZ,
+    'ru': REGISTER_SUCCESS_RU,
+    'en': REGISTER_SUCCESS_EN,
+}
+
+
+
+SETTINGS_TEXT_UZ = """
+<b>Ma'lumotlarni o'zgartirish uchun quyidagi tugmalardan foydalanishingiz mumkin 👇</b>
+"""
+
+SETTINGS_TEXT_RU = """
+<b>You can use the following buttons to change the data 👇</b>
+"""
+
+SETTINGS_TEXT_EN = """
+<b>Вы можете использовать следующие кнопки для изменения данных 👇</b>
+"""
+
+SETTINGS_TEXT = {
+    'uz': SETTINGS_TEXT_UZ,
+    'ru': SETTINGS_TEXT_RU,
+    'en': SETTINGS_TEXT_EN,
 }

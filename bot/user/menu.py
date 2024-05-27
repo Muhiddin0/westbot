@@ -21,6 +21,7 @@ async def _task(message: types.Message, state: FSMContext):
     # user ma'lumotlarin
     user = getUser(user_id)
     lang = user['lang']
+    print(lang)
     
     # menu yuborish
     await message.answer(text=texts.MENU[lang], reply_markup=buttons.MENU[lang])
