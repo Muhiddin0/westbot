@@ -226,3 +226,120 @@ SETTINGS_TEXT = {
     'ru': SETTINGS_TEXT_RU,
     'en': SETTINGS_TEXT_EN,
 }
+
+
+CONTACT_UZ = \
+"""
+Biz bilan bog'lanish uchun\n
++998-93-887-00-00
+"""
+
+CONTACT_RU = \
+"""
+Biz bilan bog'lanish uchun\n
++998-93-887-00-00
+"""
+
+CONTACT_EN = \
+"""
+Biz bilan bog'lanish uchun\n
++998-93-887-00-00
+"""
+
+
+
+INFO_UZ = \
+"""
+Milliondan ortiq mijozlar tashrif buyurgan! 
+
+West Restorani haqida qisqacha,west restorani 2010 yildan o'z foalyatini boshlagan bo'lib, shu vaqt ichida milliondan ortiq tashrif buyuruvchilarga xizmat ko'rsatishga muvaffaq bo'ldik va nafaqat poytaxt aholisi, balki uning mehmonlari uchun ham diqqatga sazovor markazga aylandik!
+West restoraning Manzili  Toshkent, Mirobod ko'chasi 1-etaj joylashgan. 
+
+
+🕰 Ish soatlari
+
+Dushanba: 11:00 – 01:00
+Seshanba: 11:00 – 01:00
+Chorshanba: 11:00 – 01:00
+Payshanba: 11:00 – 01:00
+Juma: 11:00 – 01:00
+Shanba: 11:00 – 01:00
+Yakshanba: 11:00 – 01:00
+
+
+
+📝 O'ziga xos jihatlari!
+
+🚗 Taomni tez va sifatli yetkazib berish
+🚶‍♂️ Olib ketishingiz uchun o'z vaqtida  tayyorlab qo'yish
+✅ Hamyonbop va sifatli taomlar!
+
+Aniqroq ma'lumot va Manzilni ko'rish uchun pastdagi Malumotlarni ko'rish tugmasini bosing!
+
+📞 Biz bilan bog'lanish uchun +998938870000
+"""
+
+
+INFO_RU = \
+"""
+Посетили более миллиона клиентов! 
+
+Вкратце о ресторане West,ресторан West начал свою деятельность с 2010 года, за это время мы успели обслужить более миллиона посетителей и стать изюминкой не только для жителей столицы, но и для ее гостей!
+Адрес ресторана West: Ташкент, улица Мирабад, 1 этаж. 
+
+
+♦ Часы работы
+
+Понедельник: 11:00 – 01: 00
+Вторник: 11: 00 – 01:00
+Среда: 11:00 – 01:00
+Четверг: 11:00 – 01:00
+Пятница: 11:00 – 01: 00
+Суббота: 11:00 – 01: 00
+Воскресенье: 11:00 – 01:00
+
+
+
+Особенности работы!
+
+♦ Быстрая и качественная доставка еды
+🚶♂️ Своевременно подготовить для вас еду на вынос
+♦ Доступная и качественная еда!
+
+Нажмите кнопку "просмотреть информацию" ниже, чтобы увидеть более точную информацию и местоположение!
+
+📞 +998938870000, чтобы связаться с нами
+"""
+
+
+
+INFO_EN = \
+"""
+More than a million customers have visited! 
+
+Briefly about the West restaurant, The West restaurant began its foality from 2010, during which time we managed to serve more than a million visitors and become a center of attraction not only for residents of the capital, but also for its guests!
+The address of the West restaurant is Tashkent, mirabad Street 1-etaj. 
+
+
+🕰 Working hours
+
+Monday: 11:00 – 01:00
+Tuesday: 11:00 – 01:00
+Wednesday: 11:00 – 01:00
+Thursday: 11:00 – 01:00
+Friday: 11:00 – 01:00
+Saturday: 11:00 – 01:00
+Sunday: 11:00 – 01:00
+
+
+
+📝 Specific aspects!
+
+🚗 Fast and high-quality food delivery
+🚶 ♂ ️ Ready in time for you to take
+✅ Affordable and quality dishes!
+
+Click the view information button below to see more specific information and address!
+
+📞 To contact us +998938870000
+"""

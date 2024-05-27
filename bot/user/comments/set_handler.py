@@ -24,9 +24,9 @@ async def comment_handler(message: types.Message, state: FSMContext):
     await Comments.commen_ball.set()
 
 @dp.message_handler(
-    lambda message: message.text.startswith(buttons.FIKR_BUTTON_UZ) or \
-                    message.text.startswith(buttons.FIKR_BUTTON_EN) or \
-                    message.text.startswith(buttons.FIKR_BUTTON_RU)
+    lambda message: message.text.startswith(buttons.MENU_FEEDBACK_UZ) or \
+                    message.text.startswith(buttons.MENU_FEEDBACK_RU) or \
+                    message.text.startswith(buttons.MENU_CONTACT_EN)
 )
 async def func(message: types.Message, state: FSMContext):
     await create_task(comment_handler(message, state))

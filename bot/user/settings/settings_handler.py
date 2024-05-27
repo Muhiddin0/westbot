@@ -26,9 +26,9 @@ async def settings_answer_task(message: Message, state: FSMContext):
         await message.answer(texts.SETTINGS_TEXT_EN, parse_mode='HTML', reply_markup=buttons.SETTINGS_MENYU_RU)
 
 @dp.message_handler(
-        lambda message: message.text.startswith(buttons.SOZLAMALAR_BUTTON_UZ) or \
-                message.text.startswith(buttons.SOZLAMALAR_BUTTON_EN) or \
-                    message.text.startswith(buttons.SOZLAMALAR_BUTTON_RU)
+        lambda message: message.text.startswith(buttons.MENU_SETTINGS_UZ) or \
+                message.text.startswith(buttons.MENU_SETTINGS_RU) or \
+                    message.text.startswith(buttons.MENU_SETTINGS_EN)
         )
 async def settings_answer(message: Message, state: FSMContext):
     create_task(settings_answer_task(message, state))

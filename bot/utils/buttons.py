@@ -13,6 +13,17 @@ MENU_CONTACT_UZ = '☎️ Biz bilan aloqa'
 MENU_INFO_UZ = "ℹ️ Ma'lumot"
 MENU_SETTINGS_UZ = "⚙️ Sozlamalar"
 
+MENU_ORDER_RU = '🛍 Заказать'
+MENU_FEEDBACK_RU = '✍️ Комментарий'
+MENU_CONTACT_RU = '☎️ Связаться с нами'
+MENU_INFO_RU = "ℹ️ Информация"
+MENU_SETTINGS_RU = "⚙️ Настройки"
+
+MENU_ORDER_EN = '🛍 Order'
+MENU_FEEDBACK_EN = '✍️ Comment'
+MENU_CONTACT_EN = '☎️ Contact us'
+MENU_INFO_EN = "ℹ️ Reference"
+MENU_SETTINGS_EN = "⚙️ Settings"
 
 LANGUAGES_UZ = "🇺🇿 O'zbekcha"
 LANGUAGES_RU = "🇷🇺 Русский"
@@ -28,8 +39,30 @@ MENU_BUTTONS_UZ = ReplyKeyboardMarkup(
     resize_keyboard=True
 )
 
+MENU_BUTTONS_RU = ReplyKeyboardMarkup(
+    keyboard=[
+        [MENU_ORDER_RU],
+        [MENU_FEEDBACK_RU, MENU_CONTACT_RU],
+        [MENU_INFO_RU, MENU_SETTINGS_RU]
+    ],
+    resize_keyboard=True
+)
+
+
+MENU_BUTTONS_EN = ReplyKeyboardMarkup(
+    keyboard=[
+        [MENU_ORDER_EN],
+        [MENU_FEEDBACK_EN, MENU_CONTACT_EN],
+        [MENU_INFO_EN, MENU_SETTINGS_EN]
+    ],
+    resize_keyboard=True
+)
+
+
 MENU = {
-    'uz':MENU_BUTTONS_UZ
+    'uz': MENU_BUTTONS_UZ,
+    'ru': MENU_BUTTONS_RU,
+    'en': MENU_BUTTONS_EN,
 }
 
 LANGUAGES = ReplyKeyboardMarkup(
@@ -238,4 +271,48 @@ SETTINGS_MENYU_EN = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True
 )
+
+
+INFO_LOCATION_UZ = "🕹 Manzilni ko'rish"
+INFO_LOCATION_EN = "🕹 View address"
+INFO_LOCATION_RU = "🕹 Просмотр адреса"
+
+
+INFORMATION_UZ = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text=INFO_LOCATION_UZ),
+        ],
+        [
+            KeyboardButton(text=ORTGA_BUTTON_UZ),
+        ]
+    ],
+    resize_keyboard=True
+)
+
+INFORMATION_RU = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text=INFO_LOCATION_RU),
+        ],
+        [
+            KeyboardButton(text=ORTGA_BUTTON_RU),
+        ]
+    ],
+    resize_keyboard=True
+)
+
+
+INFORMATION_EN = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text=INFO_LOCATION_EN),
+        ],
+        [
+            KeyboardButton(text=ORTGA_BUTTON_EN),
+        ]
+    ],
+    resize_keyboard=True
+)
+
 
