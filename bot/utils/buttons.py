@@ -13,6 +13,12 @@ MENU_CONTACT_UZ = '☎️ Biz bilan aloqa'
 MENU_INFO_UZ = "ℹ️ Ma'lumot"
 MENU_SETTINGS_UZ = "⚙️ Sozlamalar"
 
+
+LANGUAGES_UZ = "🇺🇿 O'zbekcha"
+LANGUAGES_RU = "🇷🇺 Русский"
+LANGUAGES_EN = "🏴󠁧󠁢󠁥󠁮󠁧󠁿 English"
+
+
 MENU_BUTTONS_UZ = ReplyKeyboardMarkup(
     keyboard=[
         [MENU_ORDER_UZ],
@@ -29,14 +35,35 @@ MENU = {
 LANGUAGES = ReplyKeyboardMarkup(
     keyboard=[
         [LANGUAGES_UZ],
+        [LANGUAGES_RU],
+        [LANGUAGES_EN],
     ],
     resize_keyboard=True,
 )
 
+
 PHONE_UZ = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton(text="Raqamni jo'natish", request_contact=True)
+            KeyboardButton(text="📞 Raqamni jo'natish", request_contact=True)
+        ],
+    ],
+    resize_keyboard=True,
+)
+
+PHONE_RU = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text="📞 Отправка номера", request_contact=True)
+        ],
+    ],
+    resize_keyboard=True,
+)
+
+PHONE_EN = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text="📞 Send number", request_contact=True)
         ],
     ],
     resize_keyboard=True,
