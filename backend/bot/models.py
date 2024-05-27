@@ -4,13 +4,22 @@ from foods.models import Food
 
 
 class UserPhone(models.Model):
-    user_id = models.BigIntegerField(unique=True)
+    user_id = models.IntegerField(unique=True)
     phone = models.CharField(max_length=15)
+
+    def __str__(self) -> str:
+        return self.phone
 
 
 class User(models.Model):
-    user_id = models.BigIntegerField(unique=True)
+    user_id = models.IntegerField(unique=True)
     lang = models.CharField(max_length=10, null=True, blank=True)
+    fullname = models.CharField(max_length=255, null=True, blank=True)
+    
+    def __str__(self) -> str:
+        
+        return self.fullname
+
 
 class Basket(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

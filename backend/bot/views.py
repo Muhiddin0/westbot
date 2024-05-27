@@ -1,19 +1,30 @@
 from django.shortcuts import get_list_or_404, get_object_or_404
 from django.shortcuts import render
 
+
 from rest_framework.views import APIView
+from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
+from . import serializers
 from foods.models import Food
 
-from .serializer import BasketSerializer
-
-from bot.models import Basket
-
+from bot.models import User, Basket
 
 # Create your views here.
 
+class GetBotUsers(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = serializers.GetBotUserSerializer
+
+
+class GetBotUser(APIView):
+    def get(self, request, user_id):
+        user = get_object_or_404(User, user_id=user_id)
+        serializer = serializers.GetBotUserSerializer(user)
+        return Response(serializer.data)
+    
 
 @api_view(['GET'])
 def GetUserBasketItems(request):
@@ -27,7 +38,7 @@ def GetUserBasketItems(request):
         }, status=400)
 
     basket = get_list_or_404(Basket, user__user_id=user_id)
-    serializer = BasketSerializer(basket, many=True)
+    serializer = serializers.BasketSerializer(basket, many=True)
 
     return Response(serializer.data)
 
@@ -46,7 +57,7 @@ def GetUserBasketItem(request):
     basket = get_object_or_404(Basket, pk=basket_id)
 
     if request.method == 'GET':
-        serializer = BasketSerializer(basket)
+        serializer = serializers.BasketSerializer(basket)
         return Response(serializer.data)
 
 
@@ -63,7 +74,7 @@ def ChangeBasketItem(request):
         if action == "decr":
             basket.count = basket.count - 1
         basket.save()
-        serializer = BasketSerializer(basket)
+        serializer = serializers.BasketSerializer(basket)
         return Response(serializer.data)
 
 
