@@ -2,12 +2,12 @@ from aiogram.types import Message
 from aiogram import Bot
 from aiogram.dispatcher import FSMContext
 
-from bot.services.services import getUser
-from ...utils import buttons, texts
+from services.services import getUser
+from utils import buttons, texts
 from asyncio import create_task
 from loader import dp, bot
 from asgiref.sync import sync_to_async
-from backend.bot.models import User
+# from backend.bot.models import User
 
 
 

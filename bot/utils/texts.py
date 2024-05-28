@@ -451,3 +451,146 @@ PHONE_NUMBER_LEN_RULE_RU = """
 PHONE_NUMBER_LEN_RULE_EN = """
 📞 Telifon number must consist of at least 9 numbers ❌
 """
+
+PHONE_NUMBER_LEN_ERROR = {
+    'uz': PHONE_NUMBER_LEN_RULE_UZ,
+    'ru': PHONE_NUMBER_LEN_RULE_RU,
+    'en': PHONE_NUMBER_LEN_RULE_EN,
+
+}
+
+
+PHONE_SWITCH_HANDLER_UZ = \
+"""
+✅ Telifon raqam muffaqiyatli almashtirildi
+
+📝 Asosiy menyuga qaytingiz
+"""
+
+
+PHONE_SWITCH_HANDLER_RU = \
+"""
+✅ Телефон номер успешно заменен
+
+📝 Вернуться в Главное меню
+"""
+
+PHONE_SWITCH_HANDLER_EN = \
+"""
+✅ Telifon number muffled replaced
+
+📝 Return to main menu
+"""
+
+
+PHONE_SWITCH_HANDLER = {
+    'uz': PHONE_SWITCH_HANDLER_UZ,
+    'ru': PHONE_SWITCH_HANDLER_RU,
+    'en': PHONE_SWITCH_HANDLER_EN,
+
+}
+
+
+LANG_SWITCH_HANDLER_UZ = \
+"""
+✅ Til muffaqiyatli almashtirildi
+
+📝 Asosiy menyuga qaytingiz
+"""
+
+
+LANG_SWITCH_HANDLER_RU = \
+"""
+✅ Язык успешно заменен
+
+📝 Вернуться в Главное меню
+"""
+
+LANG_SWITCH_HANDLER_EN = \
+"""
+✅ Language muffled replaced
+
+📝 Return to main menu
+"""
+
+LANG_SWITCH_HANDLER = {
+    'uz': LANG_SWITCH_HANDLER_UZ,
+    'ru': LANG_SWITCH_HANDLER_RU,
+    'en': LANG_SWITCH_HANDLER_EN,
+}
+
+LANG_SWITCH_UZ = \
+"""
+Tilni almashtirish
+"""
+
+LANG_SWITCH_EN = \
+"""
+Language switching
+"""
+
+LANG_SWITCH_RU = \
+"""
+Переключение языка
+"""
+
+LANG_SWITCH = {
+    'uz': LANG_SWITCH_UZ,
+    'ru': LANG_SWITCH_RU,
+    'en': LANG_SWITCH_EN,
+}
+
+
+FULLNAME_SWITCH_UZ = \
+"""
+✅ Ism muffaqiyatli almashtirildi
+
+📝 Asosiy menyuga qaytingiz
+"""
+
+FULLNAME_SWITCH_RU = \
+"""
+✅ Имя успешно заменено
+
+📝 Вернуться в Главное меню
+"""
+
+FULLNAME_SWITCH_EN = \
+"""
+✅ Name muffled replaced
+
+📝 Return to main menu
+"""
+
+FULLNAME_SWITCH_SEUCCE = {
+    'uz': FULLNAME_SWITCH_UZ,
+    'ru': FULLNAME_SWITCH_RU,
+    'en': FULLNAME_SWITCH_EN,
+}
+
+
+FULLNAME_SWITCH_SET_UZ = \
+"""
+Ismni almashtirish
+"""
+
+FULLNAME_SWITCH_SET_RU = \
+"""
+Name replacement
+"""
+
+FULLNAME_SWITCH_SET_EN = \
+"""
+Замена имени
+"""
+
+FULLNAME_SWITCH_SET = {
+    'uz': FULLNAME_SWITCH_SET_UZ,
+    'ru': FULLNAME_SWITCH_SET_RU,
+    'en': FULLNAME_SWITCH_SET_EN,
+}
+
+location_info_uz = \
+"""
+https://yandex.uz/maps/10335/tashkent/house/YkAYdAFoT0QCQFprfX54dnpgZA==/?ll=69.268648%2C41.297337&z=19.22
+"""

@@ -14,6 +14,7 @@ class FoodOrder(StatesGroup):
 class UpdateRegister(StatesGroup):
     lang = State()
     phone = State()
+    fullname = State()
 
 class Comments(StatesGroup):
     commen_ball = State()

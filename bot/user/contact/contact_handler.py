@@ -23,8 +23,8 @@ async def contact(message: Message, state: FSMContext):
 
 @dp.message_handler(
     lambda message: message.text.startswith(buttons.MENU_CONTACT_UZ) or \
-                    message.text.startswith(buttons.MENU_BUTTONS_RU) or \
-                    message.text.startswith(buttons.MENU_BUTTONS_EN)
+                    message.text.startswith(buttons.MENU_CONTACT_RU) or \
+                    message.text.startswith(buttons.MENU_CONTACT_EN)
 )
 async def func(message: Message, state: FSMContext):
     await create_task(contact(message, state))

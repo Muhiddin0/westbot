@@ -108,6 +108,13 @@ LANGUAGES = ReplyKeyboardMarkup(
 )
 
 
+lang_codes = {
+        LANGUAGES_UZ: 'uz',
+        LANGUAGES_RU: 'ru',
+        LANGUAGES_EN: 'en'
+    }
+
+
 PHONE_UZ = ReplyKeyboardMarkup(
     keyboard=[
         [

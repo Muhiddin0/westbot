@@ -1,13 +1,13 @@
 from aiogram import types
 
+from bot.utils import buttons
 from loader import dp
 from states import Comments
 from asyncio import create_task
 from aiogram.dispatcher import FSMContext
-from utils import buttons, texts
+from utils import texts
 from asgiref.sync import sync_to_async
-from backend.bot.models import User
-
+from bot.models import User
 
 async def comment_handler(message: types.Message, state: FSMContext):
     user_id = message.from_user.id
