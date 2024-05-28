@@ -3,7 +3,7 @@ from aiogram.dispatcher import FSMContext
 from bot.loader import dp, bot
 from bot.utils import buttons
 from aiogram import Bot
-from ...utils import texts
+from utils import texts
 from asgiref.sync import sync_to_async
 from backend.bot.models import User
 from bot.states import Comments

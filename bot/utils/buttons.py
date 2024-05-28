@@ -455,11 +455,83 @@ LOCATION_RU = ReplyKeyboardMarkup(
 
 FOOD_RETRIVE_UZ = ReplyKeyboardMarkup(
     keyboard=[
-        [BASKET_UZ, DELIVER_UZ],
+        [
+            KeyboardButton(text='1'),
+            KeyboardButton(text='2'),
+            KeyboardButton(text='3'),
+        ],
+        [
+            KeyboardButton(text='4'),
+            KeyboardButton(text='5'),
+            KeyboardButton(text='6'),
+        ], 
+        [
+            KeyboardButton(text='7'),
+            KeyboardButton(text='8'),
+            KeyboardButton(text='9'),
+        ],
+        [
+            ORTGA_BUTTON_UZ
+        ]
     ],
     resize_keyboard=True
 )
 
+
+FOOD_RETRIVE_RU = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text='1'),
+            KeyboardButton(text='2'),
+            KeyboardButton(text='3'),
+        ],
+        [
+            KeyboardButton(text='4'),
+            KeyboardButton(text='5'),
+            KeyboardButton(text='6'),
+        ], 
+        [
+            KeyboardButton(text='7'),
+            KeyboardButton(text='8'),
+            KeyboardButton(text='9'),
+        ],
+        [
+            ORTGA_BUTTON_RU
+        ]
+    ],
+    resize_keyboard=True
+)
+
+
+FOOD_RETRIVE_EN = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text='1'),
+            KeyboardButton(text='2'),
+            KeyboardButton(text='3'),
+        ],
+        [
+            KeyboardButton(text='4'),
+            KeyboardButton(text='5'),
+            KeyboardButton(text='6'),
+        ], 
+        [
+            KeyboardButton(text='7'),
+            KeyboardButton(text='8'),
+            KeyboardButton(text='9'),
+        ],
+        [
+            ORTGA_BUTTON_EN
+        ]
+    ],
+    resize_keyboard=True
+)
+
+
+
+
 FOOD_RETRIVE = {
-    'uz': FOODS_BUTTONS,
+    'uz': FOOD_RETRIVE_UZ,
+    'ru': FOOD_RETRIVE_RU,
+    'en': FOOD_RETRIVE_EN,
 }

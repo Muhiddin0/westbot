@@ -2,9 +2,9 @@ from aiogram.types import Message
 from asyncio import create_task
 from aiogram.dispatcher import FSMContext
 
-from bot.loader import dp
-from bot.services.services import getUser
-from bot.utils import buttons, texts
+from loader import dp
+from services.services import getUser
+from utils import buttons, texts
 
 
 

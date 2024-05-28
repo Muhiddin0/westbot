@@ -5,9 +5,8 @@ from loader import dp
 
 from asyncio import create_task
 
-from bot.services.services import getCategorys, getUser
+from services.services import getCategorys, getUser
 
-from bot.utils import buttons, texts
 from states import FoodOrder
 from utils import buttons, texts
 
