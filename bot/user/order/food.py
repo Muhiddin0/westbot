@@ -29,11 +29,15 @@ async def _task(message: types.Message, state: FSMContext):
     # categoryalarni olish
     food = getFood(food_name=food_name)
     
+    if not food:
+        await message.delete()
+        return
+    
     # tanlang maxsulotni yuborish
     await message.answer_photo(
         photo='https://www.kasandbox.org/programming-images/avatars/leaf-blue.png',
         caption=food['description_uz'],
-        reply_markup=buttons.FOOD
+        reply_markup=buttons.FOOD_RETRIVE[lang],
         )
     
     

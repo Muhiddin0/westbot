@@ -309,3 +309,4 @@ FOOD_RETRIVE_UZ = ReplyKeyboardMarkup(
 FOOD_RETRIVE = {
     'uz': FOODS_BUTTONS,
 }
+

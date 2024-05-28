@@ -28,7 +28,7 @@ async def _task(message: types.Message, state: FSMContext):
     # categoryalarni olish
     foods = getFoods(category=category_name)
 
-    if not bool(foods):        
+    if not bool(foods):
         await message.delete()
         return
     
