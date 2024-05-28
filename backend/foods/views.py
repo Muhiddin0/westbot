@@ -1,3 +1,5 @@
+from django.shortcuts import get_object_or_404, get_list_or_404
+
 from rest_framework.response import Response
 from rest_framework import generics
 from rest_framework.views import APIView
@@ -13,12 +15,15 @@ class CategoryListApiView(generics.ListAPIView):
 
 class FoodsListApiView(APIView):
 
-    def get(self, request, category_id):
-        foods = models.Food.objects.filter(category__id=category_id)
+    def get(self, request, category_name):
+        foods = models.Food.objects.filter(category__name_uz=category_name)
         serializer = serializers.FoodListSerializer(foods, many=True)
 
         return Response(serializer.data)
 
-class FoodsApiView(generics.RetrieveAPIView):
-    queryset = models.Food.objects.all()
-    serializer_class = serializers.FoodSerializer
+class FoodApiView(APIView):
+    def get(self, request, food_name):
+        food = get_object_or_404(models.Food, name_uz=food_name)
+        serializer = serializers.FoodSerializer(food)
+
+        return Response(serializer.data)
