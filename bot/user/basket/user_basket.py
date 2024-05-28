@@ -3,7 +3,7 @@ from aiogram import types
 from aiogram.dispatcher import FSMContext
 
 from asyncio import create_task
-
+from loader import dp 
 from services.services import getBasketList
 from states import Register
 
