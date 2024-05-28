@@ -12,8 +12,6 @@ from states import Register
 
 from utils import buttons, texts
 
-from tempuser import USER
-
 async def send_welcome_task(message: types.Message, state: FSMContext):
     """
     /start, /help commandalari uchun. Botga birichi kirgan userni anilash

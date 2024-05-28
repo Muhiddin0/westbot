@@ -7,7 +7,7 @@ from asyncio import create_task
 from services.services import getBasketList
 from states import Register
 
-from tempuser import USER
+
 
 from utils import buttons, texts
 

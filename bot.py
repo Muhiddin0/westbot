@@ -7,7 +7,7 @@ import user
 
 async def on_startup(dp):
     # Adminlarga xabar yuborish
-    ADMIN = os.getenv('ADMIN')
+    ADMIN = os.getenv('ADMIN_ID')
     await bot.send_message(ADMIN, "Bot ishga tushdi!")
 
 # disable skip_update deploy version

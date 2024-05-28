@@ -6,8 +6,6 @@ from aiogram.dispatcher import FSMContext
 from services.services import getUser
 from states import Register
 
-from tempuser import USER
-
 from utils import buttons, texts
 
 async def _task(message: types.Message, state: FSMContext):

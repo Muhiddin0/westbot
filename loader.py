@@ -11,8 +11,7 @@ dotenv.load_dotenv()
 
 storage = MemoryStorage()
 
-
-API_TOKEN = os.getenv('BOT_TOKEN')
+API_TOKEN = os.getenv('API_TOKEN')
 
 # Initialize bot and dispatcher
 bot = Bot(token=API_TOKEN, parse_mode='html')
