@@ -363,6 +363,27 @@ INFORMATION = {
 }
 
 
+
+CLEAR_BASKET_UZ = "❌ Savatni tozalash"
+GET_ORDER_UZ = '🚚 Buyurtma berish'
+
+
+def USER_BASKET_UZ():
+
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                ORTGA_BUTTON_UZ,
+                CLEAR_BASKET_UZ
+            ],
+            [GET_ORDER_UZ]
+        ],
+        resize_keyboard=True
+    )
+USER_BASKET = {
+    'uz':USER_BASKET_UZ
+}
+
 BASKET_UZ = "🛒 Savat"
 DELIVER_UZ = "🚚 Yetkazib berish"
 
