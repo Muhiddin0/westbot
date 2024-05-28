@@ -1,4 +1,6 @@
 from aiogram import types
+
+from ...loader import dp
 from ...states import Comments
 from asyncio import create_task
 from aiogram.dispatcher import FSMContext

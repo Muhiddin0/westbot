@@ -25,9 +25,9 @@ async def _task(message: types.Message, state: FSMContext):
     category_name = message.text
     
     # categoryalarni olish
-    foods = getFoods(category=category_name)
+    # foods = getFoods(category=category_name)
     
-    await message.answer(text=texts.FOODS[lang], reply_markup=buttons.FOODS_BUTTONS(foods, lang))
+    # await message.answer(text=texts.FOODS[lang], reply_markup=buttons.FOODS_BUTTONS(foods, lang))
     
     
 @dp.message_handler(state='*')

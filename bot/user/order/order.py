@@ -6,9 +6,9 @@ from loader import dp
 
 from asyncio import create_task
 
-from services.services import getCategorys, getUser
+from bot.services.services import getCategorys, getUser
 
-from utils import buttons, texts
+from bot.utils import buttons, texts
 
 async def _task(message: types.Message, state: FSMContext):
     """

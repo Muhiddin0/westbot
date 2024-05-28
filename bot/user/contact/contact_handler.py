@@ -3,16 +3,21 @@ from asyncio import create_task
 from aiogram.dispatcher import FSMContext
 
 from bot.loader import dp
+from bot.services.services import getUser
 from bot.utils import buttons, texts
 
 
 
-
-
 async def contact(message: Message, state: FSMContext):
+    user_id = message.from_user.id
 
+    # user ma'lumotlarin
+    user = getUser(user_id)
+    lang = user['lang']
+    print(lang)
 
-    await message.answer(texts.CONTACT_UZ, reply_markup=buttons.REMOVE_BUTTON)
+    # menu yuborish
+    await message.answer(texts.CONTACT[lang], reply_markup=buttons.BACK[lang])
 
 
 

@@ -1,5 +1,4 @@
 from . import start, register, order
-from . import contact
-from . import info
-from . import delivery
-from . import comments
+# , settings, comments, contact, info, delivery
+# from . import start, register, order, settings, comments, contact, info, delivery
+

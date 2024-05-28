@@ -228,7 +228,6 @@ SETTINGS_TEXT = {
 }
 
 
-<<<<<<< HEAD
 CONTACT_UZ = \
 """
 Biz bilan bog'lanish uchun\n
@@ -247,6 +246,13 @@ Biz bilan bog'lanish uchun\n
 +998-93-887-00-00
 """
 
+
+CONTACT = {
+    'uz': CONTACT_UZ,
+    'ru': CONTACT_UZ,
+    'en': CONTACT_UZ,
+
+}
 
 
 INFO_UZ = \
@@ -344,7 +350,15 @@ Click the view information button below to see more specific information and add
 
 📞 To contact us +998938870000
 """
-=======
+
+
+INFO = {
+    'uz': INFO_UZ,
+    'ru': INFO_RU,
+    'en': INFO_EN,
+
+}
+
 
 ORDER_UZ = """
 <b>
@@ -391,4 +405,48 @@ FOODS = {
     'ru': FOODS_RU,
     'en': FOODS_EN
 }
->>>>>>> 54934e03dd3c134ed255b151fe5b6693c1657a9a
+
+
+
+PHONE_RULE_UZ = """
+📝 Iltimos raqamda kiriting
+"""
+
+PHONE_RULE_RU = """
+📝 Введите номер
+"""
+
+PHONE_RULE_EN = """
+📝 Please enter in the number
+"""
+
+PHONE_RULE = {
+    'uz': PHONE_RULE_UZ,
+    'ru': PHONE_RULE_RU,
+    'en': PHONE_RULE_EN,
+}
+
+LOCATION_UZ = """
+Manzilni kiriting
+"""
+
+LOCATION_RU = """
+Введите адрес
+"""
+
+LOCATION_EN = """
+Enter address
+"""
+
+
+PHONE_NUMBER_LEN_RULE_UZ = """
+📞Telifon raqam eng kamida 9 ta sondan iborat bo'lish kerak❌
+"""
+
+PHONE_NUMBER_LEN_RULE_RU = """
+📞Телефон номер должен состоять как минимум из 9 цифр❌
+"""
+
+PHONE_NUMBER_LEN_RULE_EN = """
+📞 Telifon number must consist of at least 9 numbers ❌
+"""

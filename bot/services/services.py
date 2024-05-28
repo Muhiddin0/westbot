@@ -30,3 +30,8 @@ def getFoods(category):
     url = f"{BASE_URL}/foods/category/{category}/"
 
     return requests.get(url).json()
+
+def getBasketList(user_id):
+    url = BASE_URL + f"food/busket-list?user_id={user_id}"
+    response = requests.get(url)
+    return response.json()

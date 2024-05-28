@@ -4,7 +4,40 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, \
 
 
 REMOVE_BUTTON = ReplyKeyboardRemove()
-BACK = "⬅️ Ortga"
+
+BACK_UZ = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            '⬅️ Ortga'
+        ],
+    ],
+    resize_keyboard=True
+)
+
+BACK_RU = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            '⬅️ Назад'
+        ],
+    ],
+    resize_keyboard=True
+)
+
+BACK_EN = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            '⬅️ BACK'
+        ],
+    ],
+    resize_keyboard=True
+)
+
+
+BACK = {
+    'uz': BACK_UZ,
+    'ru': BACK_RU,
+    'en': BACK_EN,
+}
 
 
 MENU_ORDER_UZ = '🛍 Buyurtma berish'
@@ -273,6 +306,13 @@ SETTINGS_MENYU_EN = ReplyKeyboardMarkup(
 )
 
 
+SETTINGS_MENYU = {
+    'uz': SETTINGS_MENYU_UZ,
+    'ru': SETTINGS_MENYU_RU,
+    'en': SETTINGS_MENYU_EN,
+
+}
+
 INFO_LOCATION_UZ = "🕹 Manzilni ko'rish"
 INFO_LOCATION_EN = "🕹 View address"
 INFO_LOCATION_RU = "🕹 Просмотр адреса"
@@ -314,6 +354,13 @@ INFORMATION_EN = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True
 )
+
+INFORMATION = {
+    'uz': INFORMATION_UZ,
+    'ru': INFORMATION_RU,
+    'en': INFORMATION_EN,
+
+}
 
 
 BASKET_UZ = "🛒 Savat"
@@ -375,3 +422,32 @@ def FOODS_BUTTONS(foods, lang):
 
     button.add(BACK)
     return button
+
+
+
+LOCATION_UZ = ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text="🕹 Manzilni yuborish", request_location=True)
+            ]
+        ],
+        resize_keyboard=True
+    )
+
+LOCATION_EN = ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text="🕹 Send address", request_location=True)
+            ]
+        ],
+        resize_keyboard=True
+    )
+
+LOCATION_RU = ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text="🕹 Отправить адрес", request_location=True)
+            ]
+        ],
+        resize_keyboard=True
+    )
