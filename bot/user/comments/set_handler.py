@@ -1,11 +1,10 @@
 from aiogram import types
 
-from bot.utils import buttons
 from loader import dp
 from states import Comments
 from asyncio import create_task
 from aiogram.dispatcher import FSMContext
-from utils import texts
+from utils import texts, buttons
 from asgiref.sync import sync_to_async
 from bot.models import User
 

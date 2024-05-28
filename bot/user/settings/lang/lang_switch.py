@@ -9,7 +9,6 @@ from asgiref.sync import sync_to_async
 from utils import button, texts
 from states import UpdateRegister
 from bot.models import User
-
 from utils import buttons, texts
 
 async def lang_task(callback: types.CallbackQuery, state: FSMContext):
