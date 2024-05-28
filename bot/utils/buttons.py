@@ -420,7 +420,7 @@ def FOODS_BUTTONS(foods, lang):
     for row in food_buttons:
         button.keyboard.append(row)
 
-    button.add(BACK)
+    button.add(ORTGA_BUTTON_UZ)
     return button
 
 
@@ -453,6 +453,14 @@ LOCATION_RU = ReplyKeyboardMarkup(
     )
 
 
+RETURN_MAIN_MENYU_UZ = '🏡 Bosh menyuga qaytish'
+RETURN_MAIN_MENYU_RU = '🏡 Bosh menyuga qaytish'
+RETURN_MAIN_MENYU_EN = '🏡 Bosh menyuga qaytish'
+
+
+
+
+
 FOOD_RETRIVE_UZ = ReplyKeyboardMarkup(
     keyboard=[
         [
@@ -471,7 +479,8 @@ FOOD_RETRIVE_UZ = ReplyKeyboardMarkup(
             KeyboardButton(text='9'),
         ],
         [
-            ORTGA_BUTTON_UZ
+            KeyboardButton(text=ORTGA_BUTTON_UZ),
+            KeyboardButton(text=RETURN_MAIN_MENYU_UZ),
         ]
     ],
     resize_keyboard=True
@@ -496,7 +505,8 @@ FOOD_RETRIVE_RU = ReplyKeyboardMarkup(
             KeyboardButton(text='9'),
         ],
         [
-            ORTGA_BUTTON_RU
+            KeyboardButton(text=ORTGA_BUTTON_UZ),
+            KeyboardButton(text=RETURN_MAIN_MENYU_UZ),
         ]
     ],
     resize_keyboard=True
@@ -521,7 +531,8 @@ FOOD_RETRIVE_EN = ReplyKeyboardMarkup(
             KeyboardButton(text='9'),
         ],
         [
-            ORTGA_BUTTON_EN
+            KeyboardButton(text=ORTGA_BUTTON_UZ),
+            KeyboardButton(text=RETURN_MAIN_MENYU_UZ),
         ]
     ],
     resize_keyboard=True

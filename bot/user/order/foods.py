@@ -12,7 +12,7 @@ from utils import buttons, texts
 
 async def _task(message: types.Message, state: FSMContext):
     """
-    Bitta maxsulotni ko'rish
+    Tanlanga categoriyadagi maxsulotlar
     """
 
     # user id

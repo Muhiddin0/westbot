@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     path('foods/category/', views.CategoryListApiView.as_view()),
-    path('foods/category/<int:category_id>/', views.FoodsListApiView.as_view()),
-    path('foods/<int:category_id>/', views.FoodsApiView.as_view()),
+    path('foods/category/<str:category_name>/', views.FoodsListApiView.as_view()),
+    path('foods/<str:food_name>/', views.FoodApiView.as_view()),
 ]
