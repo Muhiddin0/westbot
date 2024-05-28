@@ -1,4 +1,3 @@
-
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 
@@ -9,6 +8,8 @@ from asyncio import create_task
 from bot.services.services import getCategorys, getUser
 
 from bot.utils import buttons, texts
+from states import FoodOrder
+from utils import buttons, texts
 
 async def _task(message: types.Message, state: FSMContext):
     """
@@ -27,6 +28,8 @@ async def _task(message: types.Message, state: FSMContext):
 
     # categoryani yuborish
     await message.answer(text=texts.ORDER[lang], reply_markup=buttons.ORDER_BUTTONS(category, lang))
+
+    await FoodOrder.category.set()
     
 @dp.message_handler(
     lambda message: message.text.startswith((

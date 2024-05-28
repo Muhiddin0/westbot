@@ -253,7 +253,7 @@ FULLNAME_SWITCH_EN = "Name change"
 
 
 ORTGA_BUTTON_UZ = "🔙 Ortga"
-ORTGA_BUTTON_EN = "🔙 back"
+ORTGA_BUTTON_EN = "🔙 Back"
 ORTGA_BUTTON_RU = "🔙 Назад"
 
 
@@ -392,7 +392,7 @@ def ORDER_BUTTONS(category, lang):
     for row in category_buttons:
         button.keyboard.append(row)
 
-    button.add(BACK)
+    button.add(ORTGA_BUTTON_UZ)
     return button
 
 
@@ -451,3 +451,15 @@ LOCATION_RU = ReplyKeyboardMarkup(
         ],
         resize_keyboard=True
     )
+
+
+FOOD_RETRIVE_UZ = ReplyKeyboardMarkup(
+    keyboard=[
+        [BASKET_UZ, DELIVER_UZ],
+    ],
+    resize_keyboard=True
+)
+
+FOOD_RETRIVE = {
+    'uz': FOODS_BUTTONS,
+}

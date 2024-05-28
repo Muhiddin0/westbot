@@ -3,7 +3,7 @@ from foods.models import Food
 
 
 
-class UserPhone(models.Model):
+class UserPhones(models.Model):
     user_id = models.IntegerField(unique=True)
     phone = models.CharField(max_length=15)
 

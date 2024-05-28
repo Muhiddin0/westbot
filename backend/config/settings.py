@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+KITCHEN_LAN = 40.7128
+KITCHEN_LON = -74.0060
 
 # Application definition
 
