@@ -1,19 +1,20 @@
 
 from aiogram import types
 from aiogram.dispatcher import FSMContext
+import requests
 
 from loader import dp
 
 from asyncio import create_task
 
-from services.services import getCategorys, getUser
+from services.services import BASE_URL, getFood, getFoods, getUser
 
 from states import FoodOrder
 from utils import buttons, texts
 
 async def _task(message: types.Message, state: FSMContext):
     """
-    🛍 Buyurtma berish
+    Bitta maxsulotni ko'rish
     """
 
     # user id
@@ -23,18 +24,20 @@ async def _task(message: types.Message, state: FSMContext):
     user = getUser(user_id)
     lang = user['lang']
 
-    # categoryalarni olish
-    category = getCategorys()
-
-    # categoryani yuborish
-    await message.answer(text=texts.ORDER[lang], reply_markup=buttons.ORDER_BUTTONS(category, lang))
-
-    await FoodOrder.category.set()
+    food_name = message.text
     
-@dp.message_handler(
-    lambda message: message.text.startswith((
-                        buttons.MENU_ORDER_UZ,)
-                        ),
-    state='*')
+    # categoryalarni olish
+    food = getFood(food_name=food_name)
+    
+    # tanlang maxsulotni yuborish
+    await message.answer_photo(
+        photo='https://www.kasandbox.org/programming-images/avatars/leaf-blue.png',
+        caption=food['description_uz'],
+        reply_markup=buttons.FOOD
+        )
+    
+    
+@dp.message_handler(state=FoodOrder.food)
 async def order(message: types.Message, state: FSMContext):
     create_task(_task(message, state))
+    

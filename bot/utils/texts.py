@@ -18,6 +18,7 @@ Welcome to the main menu
 </b>
 """
 
+
 MENU = {
     'uz': MENU_UZ,
     'ru': MENU_RU,

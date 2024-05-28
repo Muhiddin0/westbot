@@ -4,6 +4,12 @@ class Register(StatesGroup):
     lang = State()
     phone = State()
     fullname = State()
+    
+class FoodOrder(StatesGroup):
+    order = State()
+    category = State()
+    food = State()
+    
 
 class UpdateRegister(StatesGroup):
     lang = State()

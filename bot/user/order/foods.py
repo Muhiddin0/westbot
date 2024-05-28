@@ -8,6 +8,7 @@ from asyncio import create_task
 
 from services.services import getCategorys, getFoods, getUser
 
+from states import FoodOrder
 from utils import buttons, texts
 
 async def _task(message: types.Message, state: FSMContext):
@@ -26,11 +27,15 @@ async def _task(message: types.Message, state: FSMContext):
     
     # categoryalarni olish
     foods = getFoods(category=category_name)
+
+    if not bool(foods):        
+        await message.delete()
+        return
     
     await message.answer(text=texts.FOODS[lang], reply_markup=buttons.FOODS_BUTTONS(foods, lang))
     
+    await FoodOrder.food.set()
     
-@dp.message_handler(state='*')
+@dp.message_handler(state=FoodOrder.category)
 async def order(message: types.Message, state: FSMContext):
     create_task(_task(message, state))
-    
