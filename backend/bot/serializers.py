@@ -11,5 +11,6 @@ class GetBotUserSerializer(ModelSerializer):
 class BasketSerializer(ModelSerializer):
     class Meta:
         model = Basket
-        fields = ('id', 'count', 'food', )
+        # fields = ('id', 'count', 'food', )
+        fields = "__all__"
         depth = 2

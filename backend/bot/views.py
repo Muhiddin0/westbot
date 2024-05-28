@@ -1,11 +1,11 @@
 from django.shortcuts import get_list_or_404, get_object_or_404
 from django.shortcuts import render
 
-
 from rest_framework.views import APIView
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from rest_framework import status
 
 from . import serializers
 from foods.models import Food
@@ -14,17 +14,33 @@ from bot.models import User, Basket
 
 # Create your views here.
 
-class GetBotUsers(generics.ListCreateAPIView):
+class GetBotUsersView(generics.ListCreateAPIView):
     queryset = User.objects.all()
     serializer_class = serializers.GetBotUserSerializer
 
 
-class GetBotUser(APIView):
+class GetBotUserView(APIView):
     def get(self, request, user_id):
         user = get_object_or_404(User, user_id=user_id)
         serializer = serializers.GetBotUserSerializer(user)
         return Response(serializer.data)
-    
+
+class AddBacketItemView(APIView):
+
+    def post(self, request):
+        user_id = request.data.get('user_id')
+        food_name = request.data.get('food_name')
+        count = request.data.get('count')
+        
+        
+        food = get_object_or_404(Food, name_uz=food_name)
+        user = get_object_or_404(User, user_id=user_id)
+        
+        basket = Basket.objects.get_or_create(user=user, food=food, defaults={'count': count})
+
+        return Response({
+            'status': 'success',
+        })
 
 @api_view(['GET'])
 def GetUserBasketItems(request):
@@ -32,12 +48,9 @@ def GetUserBasketItems(request):
     user_id = request.GET.get('user_id')
 
     if not user_id:
-        return Response({
-            'status': 'error',
-            'message': 'user_id and food_id is required'
-        }, status=400)
-
-    basket = get_list_or_404(Basket, user__user_id=user_id)
+        basket = Basket.objects.all()
+    else:
+        basket = get_list_or_404(Basket, user__user_id=user_id)
     serializer = serializers.BasketSerializer(basket, many=True)
 
     return Response(serializer.data)
