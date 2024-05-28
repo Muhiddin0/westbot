@@ -1,5 +1,15 @@
 
 
+SUCCES_ADD_UZ = """
+<b>
+Sizning buyurtmangiz qabul qilindi
+</b>
+"""
+
+SUCCES_ADD = {
+    'uz': SUCCES_ADD_UZ
+}
+
 MENU_UZ = """
 <b>
 Asosiy menyuga xush kelibsiz

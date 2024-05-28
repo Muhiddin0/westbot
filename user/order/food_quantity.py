@@ -34,11 +34,10 @@ async def _task(message: types.Message, state: FSMContext):
     food_name = state_data['food_name']
     # basketga qo'shish
 
+    # basketga qo'shish
     addBasket(user_id, food_name, count)
     
-    # test qilish
-    bl = getBasketList(user_id)
-    print(bl)
+    await message.answer(texts.SUCCES_ADD[lang])
     
     # categoriyalarni chiqarish
     await order(message, state)
