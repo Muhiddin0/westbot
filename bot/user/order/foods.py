@@ -26,8 +26,12 @@ async def _task(message: types.Message, state: FSMContext):
     
     # categoryalarni olish
     foods = getFoods(category=category_name)
+
+    if not bool(foods):        
+        await message.delete()
+        return
     
-    # await message.answer(text=texts.FOODS[lang], reply_markup=buttons.FOODS_BUTTONS(foods, lang))
+    await message.answer(text=texts.FOODS[lang], reply_markup=buttons.FOODS_BUTTONS(foods, lang))
     
     await FoodOrder.food.set()
     

@@ -34,8 +34,12 @@ def getBasketList(user_id):
     return response.json()
 def getFood(food_name):
     url = f"{BASE_URL}/foods/{food_name}/"
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        return response.json()
 
-    return requests.get(url).json()
+    return False
 
 
 def getBasketList(user_id):

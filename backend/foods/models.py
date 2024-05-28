@@ -13,9 +13,9 @@ class Category(models.Model):
 
 class Food(models.Model):
     img = models.ImageField(upload_to='foods/')
-    name_uz = models.CharField("Taom nomi", max_length=255)
-    name_ru = models.CharField("Название блюда", max_length=255)
-    name_en = models.CharField("Name of the dish", max_length=255)
+    name_uz = models.CharField("Taom nomi", max_length=255, unique=True)
+    name_ru = models.CharField("Название блюда", max_length=255, unique=True)
+    name_en = models.CharField("Name of the dish", max_length=255, unique=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     price = models.IntegerField()
     description_uz = models.TextField("Tavsifi",)
