@@ -1,5 +1,6 @@
 from django.shortcuts import get_list_or_404, get_object_or_404
 from django.shortcuts import render
+from django.db.models import Q
 
 from rest_framework.views import APIView
 from rest_framework import generics
@@ -11,6 +12,8 @@ from . import serializers
 from foods.models import Food
 
 from bot.models import User, Basket
+
+
 
 # Create your views here.
 
@@ -32,11 +35,15 @@ class AddBacketItemView(APIView):
         food_name = request.data.get('food_name')
         count = request.data.get('count')
         
-        
-        food = get_object_or_404(Food, name_uz=food_name)
+        food = get_object_or_404(Food, Q(name_uz=food_name) | Q(name_ru=food_name) | Q(name_en=food_name))
         user = get_object_or_404(User, user_id=user_id)
         
-        basket = Basket.objects.get_or_create(user=user, food=food, defaults={'count': count})
+        try:
+            old_basket_item = Basket.objects.get(user=user, food=food)
+            old_basket_item.count = count
+            old_basket_item.save()
+        except:
+            Basket.objects.create(user=user, food=food, count=count)
 
         return Response({
             'status': 'success',
@@ -64,7 +71,6 @@ def GetUserBasketItem(request):
     if not basket_id:
         return Response({
             'status': 'error',
-            'message': 'user_id and food_id is required'
         }, status=400)
 
     basket = get_object_or_404(Basket, pk=basket_id)
@@ -119,15 +125,17 @@ def ClearUserBasketAndSetRating(request):
 
 @api_view(['GET'])
 def DeleteBasket(request):
-    basket_id = request.GET.get('basket_id')
 
-    if not basket_id:
+    food_name = request.GET.get('food_name')
+    user_id = request.GET.get('user_id')
+
+    try:
+        basket = Basket.objects.get(user__user_id=user_id, food__name_uz=food_name)
+    except:
         return Response({
             "status": False,
-            "basket_id": "basket_id is required"
-        })
-
-    basket = Basket.objects.get(id=basket_id)
+            "message": "Basket not found"
+        })      
 
     basket.delete()
 
