@@ -34,11 +34,11 @@ async def _task(message: types.Message, state: FSMContext):
     if not bool(foods):        
         # await message.delete()
         if message.text.startswith((buttons.BASKET_UZ, buttons.BASKET_RU, buttons.BASKET_EN)):
-            await user_basket()
+            await user_basket(message, state)
         if message.text.startswith((buttons.DELIVER_UZ, buttons.DELIVER_RU, buttons.DELIVER_EN)):
-            await deliver_food()
+            await deliver_food(message, state)
         if message.text.startswith((buttons.TAKE_UZ, buttons.TAKE_RU, buttons.TAKE_EN)):
-            await take_food()
+            await take_food(message, state)
 
         return
     
