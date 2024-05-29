@@ -1,3 +1,4 @@
+print("2. Init start...")
 
 from aiogram import types
 from aiogram.dispatcher import FSMContext
@@ -32,6 +33,7 @@ async def send_welcome_task(message: types.Message, state: FSMContext):
         """
         await message.answer(text=texts.LANGUAGES, reply_markup=buttons.LANGUAGES)
         await Register.lang.set()
+        return
 
     await MainMenu(message=message, state=state)
 

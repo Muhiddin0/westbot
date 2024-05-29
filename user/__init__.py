@@ -1,13 +1,15 @@
 
 from . import back
+from . import start
+
 from . import (
-    start,
-    register,
     basket,
-    order,
+    delivery,
+    take,
+    orderd,
+    register,
     settings,
     comments,
     contact,
     info,
-    delivery
-    )
+)

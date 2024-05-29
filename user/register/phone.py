@@ -28,7 +28,7 @@ async def _task(message: types.Message, state: FSMContext):
     await message.answer(text=texts.FULLNAME[lang], reply_markup=buttons.REMOVE_BUTTON)
     
     # stateni yangilash, phoneni qo'shish
-    await state.update_data({'phone': contact})
+    await state.set_data({'phone': contact, 'lang': lang})
 
     # stateni fullnamega o'tqazish
     await Register.fullname.set()

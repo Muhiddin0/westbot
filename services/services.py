@@ -37,11 +37,7 @@ def addBasket(user_id, food_name, count):
         })
     return response.json()
 
-def getBasketList(user_id):
-    url = BASE_URL + f"busket/list?user_id={user_id}"
-    response = requests.get(url)
-    return response.json()
-    
+
 def getFood(food_name):
     url = f"{BASE_URL}/foods/{food_name}/"
     response = requests.get(url)
@@ -54,8 +50,11 @@ def getFood(food_name):
 
 def getBasketList(user_id):
     url = BASE_URL + f"/busket/list?user_id={user_id}"
+
     response = requests.get(url)
-    return response.json()
+    if response.status_code == 200:
+        return response.json()
+    return False
 
 
 def getBasketItem(basket_id):
@@ -69,12 +68,9 @@ def changeBasketItem(basket_id, action):
 
 def clearBasketAndSetRating(user_id):
     
-    response = requests.get(BASE_URL + f'/food/busket-clear-and-rating?user_id={user_id}')
+    response = requests.get(BASE_URL + f'/busket/clear-and-rating?user_id={user_id}')
     return response.json()
 
-def deleteBasket(basket_id):
-    response = requests.get(BASE_URL + f'/food/basket-delete?basket_id={basket_id}')
+def deleteBasket(food_name, user_id):
+    response = requests.get(BASE_URL + f'/busket/delete?food_name={food_name}&user_id={user_id}')
     return response.json()
-
-
-

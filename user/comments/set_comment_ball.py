@@ -24,11 +24,11 @@ async def set_name_task(message: Message, state: FSMContext):
     except:
         raise Exception("User topilmadi")
 
-    if (user.lang == "uz"):
+    if (lang == "uz"):
         await message.answer(texts.COMMENT_UZ)
-    elif (user.lang == "ru"):
+    elif (lang == "ru"):
         await message.answer(texts.COMMENT_RU)
-    elif (user.lang == "en"):
+    elif (lang == "en"):
         await message.answer(texts.COMMENT_EN)
 
     await state.set_state(Comments.comment)

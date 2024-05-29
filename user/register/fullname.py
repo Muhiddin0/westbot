@@ -25,10 +25,11 @@ async def _task(message: types.Message, state: FSMContext):
     # fullname ma'lumotlarini tekshirish
     fullname_is_valid = fullname_validator(fullname=fullname)
     
+    # userni tilini olish
+    state_data = await state.get_data()
+    lang = state_data['lang']
+    
     if not fullname_is_valid:
-        # userni tilini olish
-        state_data = await state.get_data()
-        lang = state_data['lang']
         """
         fullname ma'lumotlari noto'g'ri bo'lsa
         """
@@ -43,12 +44,12 @@ async def _task(message: types.Message, state: FSMContext):
 
     # userni ma'lumotlarini olish
     user = await state.get_data()
-
+    
     # userni ba'lumotlar bazasiga qo'shish
     createUser(user)
 
     # userni ro'yxatdan o'tgani haqida habar berish
-    await message.answer(text=texts.REGISTER_SUCCESS[user['lang']])
+    await message.answer(text=texts.REGISTER_SUCCESS[lang])
 
     await MainMenu(message=message, state=state)
     

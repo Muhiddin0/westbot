@@ -1,31 +1,22 @@
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 
-from asgiref.sync import sync_to_async
 from asyncio import create_task
 
-# from bot.management.commands.recyclable.main_menu import main_menu
-from bot.states import Register, Delivery
-from bot.utils import texts, buttons
-from bot.loader import dp
-from backend.bot.models import User
+# from recyclable.main_menu import main_menu
+from utils import texts, buttons
+from states import Delivery
+from loader import dp
 
-from bot.services.services import getUser
+from services.services import getUser
 
 
 async def set_phone_task(message: types.Message, state: FSMContext):
-    user_id = message.from_user.id
     user_id = message.from_user.id
 
     # user ma'lumotlarin
     user = getUser(user_id)
     lang = user['lang']
-    print(lang)
-    # menu yuborish
-    try:
-        user = await sync_to_async(User.objects.get)(user_id=user_id)
-    except:
-        raise Exception("User topilmadi")
 
     if (lang == "uz"):
         await state.update_data(phone=message.text)

@@ -18,7 +18,7 @@ async def set_comment_task(message: Message, state: FSMContext):
         user = await sync_to_async(User.objects.get)(user_id=user_id)
     except:
         raise Exception("User topilmadi")
-    if (user.lang == 'uz'):
+    if (lang == 'uz'):
         await state.update_data(comment_at=message.text)
         data = await state.get_data()
         ball = data.get('ball')
@@ -32,7 +32,7 @@ async def set_comment_task(message: Message, state: FSMContext):
         )
     await message.answer(texts.COMMENT_RECEPTION_RU, reply_markup=buttons.COMMENT_BACK_UZ)
     await state.finish()
-    if (user.lang == 'en'):
+    if (lang == 'en'):
         await state.update_data(comment_at=message.text)
         data = await state.get_data()
         ball = data.get('ball')
@@ -47,7 +47,7 @@ async def set_comment_task(message: Message, state: FSMContext):
     await message.answer(texts.COMMENT_RECEPTION_EN, reply_markup=buttons.COMMENT_BACK_UZ)
     await state.finish()
 
-    if (user.lang == 'ru'):
+    if (lang == 'ru'):
         await state.update_data(comment_at=message.text)
         data = await state.get_data()
         ball = data.get('ball')

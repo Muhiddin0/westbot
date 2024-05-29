@@ -1,4 +1,6 @@
 
+print("1. Init back...")
+
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 
@@ -28,7 +30,7 @@ async def _task(message: types.Message, state: FSMContext):
         lambda message: message.text.startswith((
             buttons.ORTGA_BUTTON_UZ,   
             buttons.ORTGA_BUTTON_RU,   
-            buttons.ORTGA_BUTTON_EN,   
+            buttons.ORTGA_BUTTON_EN,
         )),
         state='*')
 async def back(message: types.Message, state: FSMContext):

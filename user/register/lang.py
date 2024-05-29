@@ -17,9 +17,6 @@ async def _task(message: types.Message, state: FSMContext):
     Ro'yxatdan o'tmagan userni ro'yxatdan o'tqazishni boshlash va
     Bu yerda userni tili aniqlanadi
     """
-
-    # user id
-    user_id = message.from_user.id
     lang = message.text
     
     lang_codes = {
