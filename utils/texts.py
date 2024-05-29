@@ -55,6 +55,17 @@ MENU = {
     'en': MENU_EN,
 }
 
+
+
+FOOD_DESCRIPTION = \
+"""
+<b>
+{}
+
+{}
+</b>
+"""
+
 LANGUAGES = """
 <b>
 Iltimos tilni tanlang

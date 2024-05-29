@@ -34,10 +34,22 @@ async def _task(message: types.Message, state: FSMContext):
         return
     
     # tanlang maxsulotni yuborish
+    img = requests.get(food['img'])
+
+    if lang == 'uz':
+        food_description = food['description_uz']
+    elif lang == 'ru':
+        food_description = food['description_ru']
+    else:
+        food_description = food['description_en']
+    
     await message.answer_photo(
-        photo='https://www.kasandbox.org/programming-images/avatars/leaf-blue.png',
-        caption=food['description_uz'],
-        reply_markup=buttons.FOOD_RETRIVE[lang],
+        photo=img.content,
+        caption=texts.FOOD_DESCRIPTION.format(
+                food_name,
+                food_description
+            ),
+            reply_markup=buttons.FOOD_RETRIVE[lang],
         )
     
     # user tanlagan maxshulotni statega joylash
