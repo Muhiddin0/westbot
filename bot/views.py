@@ -22,11 +22,12 @@ class GetBotUsersView(generics.ListCreateAPIView):
     serializer_class = serializers.GetBotUserSerializer
 
 
-class GetBotUserView(APIView):
-    def get(self, request, user_id):
-        user = get_object_or_404(User, user_id=user_id)
-        serializer = serializers.GetBotUserSerializer(user)
-        return Response(serializer.data)
+class GetBotUserView(generics.RetrieveUpdateAPIView):
+    queryset = User.objects.all()
+    serializer_class = serializers.GetBotUserSerializer
+    
+    def get_object(self):
+        return get_object_or_404(User, user_id=self.kwargs.get('pk'))
 
 class AddBacketItemView(APIView):
 
